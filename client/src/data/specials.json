@@ -1,0 +1,25 @@
+{
+  "specialsData": [
+    {
+      "id": 1,
+      "title": "Greek Salad",
+      "price": 12.99,
+      "image": "/images/meals/Salad.png",
+      "description": "The famous Greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons."
+    },
+    {
+      "id": 2,
+      "title": "Pasta",
+      "price": 12.99,
+      "image": "/images/meals/pasta.png",
+      "description": "Delicious penne pasta tossed in a rich tomato sauce with fresh herbs, garlic and a hint of olive oil, topped with parmesan cheese."
+    },
+    {
+      "id": 3,
+      "title": "Bruschetta",
+      "price": 12.99,
+      "image": "/images/meals/bruschetta.png",
+      "description": "Grilled bread topped with a mixture of fresh tomatoes, basil, garlic and olive oil, finished with a touch of sea salt."
+    }
+  ]
+}

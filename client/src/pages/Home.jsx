@@ -1,12 +1,16 @@
 import { useNavigate } from "react-router-dom";
+import Hero from "../components/home/Hero";
+import Specials from "../components/home/Specials";
+import Testimonials from "../components/home/Testimonials";
 
 const Home  = () => {
     const navigate = useNavigate()
     return ( 
-        <>
-            <h1>im HomePage</h1>
-            <button onClick={() => navigate('/booking')}>Booking</button>
-        </>
+       <main>
+        <Hero/>
+        <Specials/>
+        <Testimonials/>
+       </main>
      );
 }
  

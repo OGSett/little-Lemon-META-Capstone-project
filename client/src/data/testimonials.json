@@ -1,0 +1,32 @@
+{
+  "testimonialsData": [
+    {
+      "id": 1,
+      "name": "Emily Johnson",
+      "rating": 5,
+      "image": "/images/reviews/emily.png",
+      "review": "Absolutely amazing food and atmosphere! The Greek salad was incredibly fresh, crisp, and full of vibrant flavor with perfectly balanced ingredients. Every bite tasted high quality, and the overall experience was warm and enjoyable. The service was also friendly and attentive, which made the visit even better. Highly recommend!"
+    },
+    {
+      "id": 2,
+      "name": "Michael Brown",
+      "rating": 4,
+      "image": "/images/reviews/michael.png",
+      "review": "Great service and delicious meals. The pasta was cooked perfectly, rich in flavor, and served fresh and hot. The staff were very friendly, welcoming, and attentive throughout the entire experience, making the atmosphere even more enjoyable. I would definitely come back again!"
+    },
+    {
+      "id": 3,
+      "name": "Sophia Martinez",
+      "rating": 5,
+      "image": "/images/reviews/sophia.png",
+      "review": "One of the best dining experiences I’ve had. The place is cozy and inviting, with a warm atmosphere from the moment you walk in. The food was delicious and well prepared, and the customer service was friendly and attentive. I’d definitely recommend it and would come back again."
+    },
+    {
+      "id": 4,
+      "name": "David Wilson",
+      "rating": 4,
+      "image": "/images/reviews/david.png",
+      "review": "Very good restaurant with a nice vibe. The atmosphere was relaxed and welcoming, making it a great place to enjoy a meal. I especially loved the bruschetta—it was fresh, flavorful, and perfectly prepared. The service was quick and efficient, without feeling rushed, which made the whole experience even better. Would definitely recommend!"
+    }
+  ]
+}
