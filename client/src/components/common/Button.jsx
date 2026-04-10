@@ -7,7 +7,7 @@ const ReserveBtn = ({ text, onClick, color, textColor, isItNav }) => {
                 "--btn-color": `var(${color || '--primary-green-cold'})`,
                 "--btn-text": `var(${textColor || '--white'})`,
             }}
-             className={`${visibilityClass} bg-[var(--btn-color)] text-[var(--btn-text)] hover:brightness-90 px-6 py-2 rounded-lg text-[18px]`}
+             className={`${visibilityClass} bg-[var(--btn-color)] text-[var(--btn-text)] hover:brightness-90 px-6 py-2 rounded-lg text-[18px] hover:cursor-pointer`}
         >
             {text}
         </button>

@@ -19,7 +19,7 @@ const Footer = () => {
             />
           </div>
 
-          <div className="">
+          <div className='flex flex-col items-start justify-center h-full'  >
             <h3 className="font-semibold mb-3">Little Lemon</h3>
             <nav>
               <ul className="space-y-2 text-sm">
@@ -52,7 +52,7 @@ const Footer = () => {
             </nav>
           </div>
 
-          <div>
+          <div className='flex flex-col items-start justify-center h-full'>
             <h3 className="font-semibold mb-3">Contact</h3>
             <address className="not-italic text-sm space-y-1">
               <p>Little Lemon</p>
@@ -76,7 +76,7 @@ const Footer = () => {
             </address>
           </div>
 
-          <div>
+          <div className='flex flex-col items-start justify-center h-full'>
             <h3 className="font-semibold mb-3">Social Media</h3>
             <ul className="space-y-2 text-sm">
               <li>
@@ -98,10 +98,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="text-center text-sm space-y-1">
-          <p>Developed by Youssef MK.</p>
-          <p>2025 Little Lemon. All rights reserved.</p>
-        </div>
+        
       </div>
     </footer>
   );

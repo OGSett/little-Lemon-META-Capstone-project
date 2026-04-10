@@ -1,19 +1,39 @@
-import { useNavigate } from "react-router-dom";
 import Hero from "../components/home/Hero";
 import Specials from "../components/home/Specials";
 import Testimonials from "../components/home/Testimonials";
 import About from "../components/home/About";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
-const Home  = () => {
-    const navigate = useNavigate()
-    return ( 
-       <main>
-        <Hero/>
-        <Specials/>
-        <Testimonials/>
-        <About/>
-       </main>
-     );
-}
- 
-export default Home ;
+const Home = () => {
+  const location = useLocation()
+
+  useEffect(() => {
+    const hash = window.location.hash.replace("#", "")
+    if (hash ) {
+      const section = document.getElementById(hash)
+      if(section) {
+        section.scrollIntoView({behavior: 'smooth'})
+      }
+    }
+  },[location.hash])
+
+  return (
+    <main>
+      <section id="home">
+        <Hero />
+      </section>
+      <section id="specials">
+        <Specials />
+      </section>
+      <section id="testimonials">
+        <Testimonials />
+      </section>
+      <section id="about">
+        <About />
+      </section>
+    </main>
+  );
+};
+
+export default Home;
