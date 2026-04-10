@@ -5,8 +5,8 @@ const Testimonials = () => {
     return ( 
         <section className="bg-[var(--secondary-bg)]" >
             <div className="testimonials-layout flex flex-col items-center justify-between max-w-7xl mx-auto px-4 py-16">
-                <h1 className=" mb-0 mt-1 text-[64px]">What our customers say!</h1>
-                <div className="testimonials-cards grid grid-cols-4 gap-10 mt-16 w-full">
+                <h1 className=" mb-0 mt-1 text-[42px] md:text-[64px]">What our customers say!</h1>
+                <div className="testimonials-cards grid md:grid-cols-2 lg:grid-cols-4 grid-cols-1 gap-10 mt-16 w-full">
                     {testimonialsData.testimonialsData.map((testimonial) => (
                         <TestimonialsCard
                             key={testimonial.id}    
