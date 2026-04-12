@@ -37,9 +37,9 @@ function reducer(state, action) {
         default:
             return state;
     }
-}
+    }
 
-const getAvailableTimes = (selectedDate) => {
+export const getAvailableTimes = (selectedDate) => {
     if (!selectedDate) return []
 
     const day = new Date(selectedDate).getDate();
