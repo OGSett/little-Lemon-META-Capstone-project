@@ -1,49 +1,52 @@
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
-const ConfirmedBooking   = () => {
-    const navigate = useNavigate()
+const ConfirmedBooking = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const booking = location.state;
 
-    return ( 
-        <section className="min-h-screen bg-neutral-100 px-4 pb-12 pt-20">
-      <div className="mx-auto flex w-full   max-w-3xl flex-col items-center text-center">
-        <h1 className="mb-4 font-serif text-4xl font-bold text-black md:text-6xl">
-          Thank you for your reservation!
-        </h1>
+  if (!booking) {
+    return (
+      <section className="px-4 py-12">
+        <div className="mx-auto max-w-md rounded-2xl p-6 shadow-sm md:p-8">
+          <h1 className="text-3xl font-bold text-black">No booking found</h1>
+          <p className="mt-4 text-neutral-600">
+            Please make a reservation first.
+          </p>
+          <button
+            onClick={() => navigate("/booking")}
+            className="mt-6 rounded-xl bg-yellow-400 px-4 py-3 text-sm font-semibold text-black transition hover:opacity-90"
+          >
+            Go to Booking
+          </button>
+        </div>
+      </section>
+    );
+  }
 
-        <p className="mb-10 text-sm font-medium uppercase tracking-wide text-black md:text-base">
-          We look forward to seeing you at Little Lemon.
-        </p>
+  return (
+    <section className="px-4 py-12">
+      <div className="mx-auto max-w-md rounded-2xl p-6 shadow-sm md:p-8">
+        <h1 className="text-3xl font-bold text-black">Booking Confirmed</h1>
+        <p className="mt-4 text-neutral-700">Thank you for your reservation.</p>
 
-        <div className="w-full max-w-md rounded-2xl bg-[var(--primary-green-cold)] p-6 text-left shadow-sm md:p-8">
-          <h2 className="mb-6 font-serif text-3xl font-bold text-yellow-400">
-            Confirmation details
-          </h2>
-
-          <div className="space-y-4 text-white">
-            <p className="text-lg">
-              <span className="font-semibold">Occasion:</span> Birthday
-            </p>
-            <p className="text-lg">
-              <span className="font-semibold">Guests:</span> 1
-            </p>
-            <p className="text-lg">
-              <span className="font-semibold">Date:</span> 2025-12-04
-            </p>
-            <p className="text-lg">
-              <span className="font-semibold">Time:</span> 17:00
-            </p>
-          </div>
+        <div className="mt-6 space-y-2 text-neutral-800">
+          <p><strong>Full Name:</strong> {booking.fullName}</p>
+          <p><strong>Date:</strong> {booking.date}</p>
+          <p><strong>Time:</strong> {booking.time}</p>
+          <p><strong>Guests:</strong> {booking.guests}</p>
+          <p><strong>Occasion:</strong> {booking.occasion}</p>
         </div>
 
         <button
-          type="button"
-          className="mt-10 w-full max-w-md rounded-xl bg-yellow-400 px-4 py-4 text-base font-semibold text-black transition hover:opacity-90"
+          onClick={() => navigate("/")}
+          className="mt-6 rounded-xl bg-yellow-400 px-4 py-3 text-sm font-semibold text-black transition hover:opacity-90"
         >
-          Back to home
+          Back to Home
         </button>
       </div>
     </section>
-     );
-}
- 
-export default ConfirmedBooking ;
+  );
+};
+
+export default ConfirmedBooking;
