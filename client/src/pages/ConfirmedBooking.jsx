@@ -25,10 +25,10 @@ const ConfirmedBooking = () => {
   }
 
   return (
-    <section className="px-4 py-12">
+    <section className="px-4 py-12 h-[80vh] lg:h-[80vh] flex items-center justify-center">
       <div className="mx-auto max-w-md rounded-2xl p-6 shadow-sm md:p-8">
         <h1 className="text-3xl font-bold text-black">Booking Confirmed</h1>
-        <p className="mt-4 text-neutral-700">Thank you for your reservation.</p>
+        <p className="mt-4 text-neutral-700">Thank you <strong>{booking.fullName}</strong> for your reservation.</p>
 
         <div className="mt-6 space-y-2 text-neutral-800">
           <p><strong>Full Name:</strong> {booking.fullName}</p>

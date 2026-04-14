@@ -16,10 +16,9 @@ export const TimeField = ({ value, onChange, times, error }) => {
         value={value}
         onChange={onChange}
         disabled={isDisabled}
-        className={`${error ? "border-red-500" : "border-neutral-200"} w-full rounded-lg border bg-neutral-100 px-4 py-3 text-sm text-neutral-800 outline-none transition focus:border-yellow-500 focus:bg-white`}
+        className={`${error ? "border-red-500" : "border-neutral-200"} w-full hover:cursor-pointer rounded-lg border bg-neutral-100 px-4 py-3 text-sm text-neutral-800 outline-none transition focus:border-yellow-500 focus:bg-white`}
       >
-        {/* 🔥 Placeholder */}
-        <option value="">
+        <option value="" disabled>
           {isDisabled ? "Select a date first" : "Select a time"}
         </option>
 

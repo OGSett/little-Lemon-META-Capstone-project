@@ -5,6 +5,14 @@ export const validateBooking = (formData) => {
     errors.fullName = "Full name is required";
   }
 
+  const today = new Date().toISOString().split("T")[0];
+
+  if (!formData.date) {
+    errors.date = "Date is required";
+  } else if (formData.date < today) {
+    errors.date = "Cannot select a past date";
+  }
+
   if (!formData.date) {
     errors.date = "Date is required";
   }
@@ -19,10 +27,10 @@ export const validateBooking = (formData) => {
     errors.guests = "Guests must be between 1 and 10";
   }
 
-  // optional (you can skip if not required)
   if (!formData.occasion) {
     errors.occasion = "Please select an occasion";
   }
 
   return errors;
+
 };

@@ -9,7 +9,7 @@ import { SubmitButton } from "./SubmitButton";
 import { useBookingForm } from "../../hooks/useBookingForm";
 
 export const BookingForm = () => {
-  const { formData, handleChange, handleSubmit } = useBookingForm();
+  const { formData, handleChange, handleSubmit, availableTimes, isSubmitting } = useBookingForm();
 
   return (
     <form className="space-y-6" onSubmit={handleSubmit}>
@@ -28,7 +28,7 @@ export const BookingForm = () => {
       <TimeField
         value={formData.time}
         onChange={handleChange}
-        times={formData.availableTimes}
+        times={availableTimes}
         error={formData.errors.time}
       />
 
@@ -44,7 +44,7 @@ export const BookingForm = () => {
         error={formData.errors.occasion}
       />
 
-      <SubmitButton />
+      <SubmitButton submitState={isSubmitting} />
     </form>
   );
 };
