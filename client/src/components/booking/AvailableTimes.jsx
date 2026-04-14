@@ -14,6 +14,7 @@ export const TimeField = ({ value, onChange, times, error }) => {
         id="time"
         name="time"
         value={value}
+        required
         onChange={onChange}
         disabled={isDisabled}
         className={`${error ? "border-red-500" : "border-neutral-200"} w-full hover:cursor-pointer rounded-lg border bg-neutral-100 px-4 py-3 text-sm text-neutral-800 outline-none transition focus:border-yellow-500 focus:bg-white`}

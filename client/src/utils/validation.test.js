@@ -18,9 +18,10 @@ describe('validateBooking', () => {
   })
 
   test('returns no errors for valid data', () => {
+    const date = new Date().toISOString().split('T')[0]
     const result = validateBooking({
       fullName: 'Youssef',
-      date: '2026-05-12',
+      date: date,
       time: '18:00',
       guests: 2,
       occasion: 'Birthday'

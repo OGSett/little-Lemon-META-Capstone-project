@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 
 export const NameField = ({ value, onChange, error }) => {
   return (
@@ -80,7 +79,6 @@ export const GuestsField = ({ value, onChange, error }) => {
 };
 
 export const OccasionField = ({ value, onChange, error }) => {
-  useEffect(()=> {console.log(value)}, [value])
   return (
     <div>
       <label
