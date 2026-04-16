@@ -12,11 +12,7 @@ export const validateBooking = (formData) => {
   } else if (formData.date < today) {
     errors.date = "Cannot select a past date";
   }
-
-  if (!formData.date) {
-    errors.date = "Date is required";
-  }
-
+  
   if (!formData.time) {
     errors.time = "Time is required";
   }

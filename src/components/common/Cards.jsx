@@ -34,7 +34,7 @@ const SpecialCard = ({ title, price, description, image }) => {
         </div>
 
         <p className="text-gray-600 text-sm leading-6">{description}</p>
-        <div className="flex justify-start items-center mb-3 mt-4 hover:scale-102 hover:cursor-pointer transition-transform duration-200">
+        <div className="flex justify-start items-center mb-3 mt-4">
           <span className="">Order a delivery </span>
           <img className="mx-2" src="/delivery.svg" alt="delivery" />
         </div>

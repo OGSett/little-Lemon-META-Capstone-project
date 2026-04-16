@@ -10,7 +10,7 @@ export const fetchAPI = (selectedDate) => {
   return ["18:00", "19:00", "20:00", "21:00"];
 };
 
-export const submitAPI = async (formData) => {
+export const submitAPI = async () => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(true)

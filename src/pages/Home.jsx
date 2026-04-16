@@ -21,9 +21,7 @@ const Home = () => {
   },[location.hash])
 
   return (
-    <main className="relative">
-      {/* <button onClick={handlescroll} className="fixed hover:cursor-pointer">GO UP</button> */}
-
+    <>
       <GoUpButton/>
       <section id="home">
         <Hero />
@@ -37,7 +35,7 @@ const Home = () => {
       <section id="about">
         <About />
       </section>
-    </main>
+    </>
   );
 };
 

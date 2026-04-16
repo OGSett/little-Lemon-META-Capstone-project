@@ -15,25 +15,29 @@ const initialState = {
 
 function reducer(state, action) {
     switch (action.type) {
-        case 'SET_FIELD':
+
+        case 'SET_FIELD': {
             const updatedErrors = { ...state.errors }
             delete updatedErrors[action.field]
-
             return {
                 ...state,
                 [action.field]: action.value,
                 errors: updatedErrors,
             };
+        }
+
         case 'SET_ERRORS':
             return {
                 ...state,
                 errors: action.payload,
             };
+
         case 'SET_SUBMITTING':
             return {
                 ...state,
                 isSubmitting: action.payload,
             }
+
         default:
             return state;
     }
@@ -96,7 +100,13 @@ export const useBookingForm = () => {
         dispatch({ type: 'SET_SUBMITTING', payload: true, })
         const success = await submitAPI(formData)
         if (success) {
-            const { errors, isSubmitting, ...cleanData } = formData
+            const cleanData = {
+                fullName: formData.fullName,
+                date: formData.date,
+                time: formData.time,
+                guests: formData.guests,
+                occasion: formData.occasion,
+            }
             navigate('/confirmed', { state: cleanData })
             return
         }
